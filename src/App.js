@@ -1,14 +1,16 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
+  useEffect(() => {
+    setCounter(100);
+  }, []);
 
    return (
     <div className="App">
       <button onClick={() => setCounter((prevCount) => prevCount - 1)}>-</button>
-      {/* calling the name of the state */}
-        <h1>{counter}</h1>
+         <h1>{counter}</h1>
         <button onClick={() => setCounter((prevCount) => prevCount + 1)}>+</button>
     </div>
   );
