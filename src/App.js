@@ -1,24 +1,26 @@
-// import React from 'react';
+import React from 'react';
 import { useEffect } from 'react';
 
+import './App.css';
+import SearchIcon from './search.svg';
 
-const API_URL = 'http://omdb.com?apikey=1511db18';
+const API_URL = 'http://www.omdbapi.com?apikey=1511db18';
 
 function App() {
     const search = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`);
+        // const response = await fetch('http://www.omdbapi.com')
         const data = await response.json();
 
-        console.log(data.search);
+        console.log(data.Search);
     }
 
     useEffect(() => {
-        search('Superman');
+        search('Dragonball');
     }, []);
-
   return (
-    <div>
-        <h1>App</h1>
+    <div className='app'>
+        <h1>MovieLand</h1>
     </div>
   )
 }
