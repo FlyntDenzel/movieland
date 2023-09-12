@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-function App() {
-  return (
+// const Person = (props) =>{
+//   return (
+//     <>
+//     <h1>Name: {props.fname}</h1>
+//     <h2>Last Name: {props.lname}</h2>
+//     <h2>Age: {props.age}</h2>
+//     </>
+//   )
+// }
+
+
+const App = () => {
+   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       {/* <Person  
+       fname={'Nchang'} 
+       lname={'Denzel'} 
+       age={19}
+       />
+       <Person fname={'John'} lname={'Doe'} age={24}/>
+       <Person fname={'Jane'} lname={'Smith'} age={45}/>
+       <Person fname='Lorem' lname='Denzel' age='23'/> */}
+
     </div>
   );
 }
