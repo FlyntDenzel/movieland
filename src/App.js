@@ -22,7 +22,7 @@ const App = () => {
 
     const search = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`);
-        // const response = await fetch('http://www.omdbapi.com')
+        // const response = await fetch('https://www.omdbapi.com')
         const data = await response.json();
 
         setMovies(data.Search);
